@@ -4,38 +4,60 @@
 
 ## 🎯 Objetivo / Objective
 
-Este laboratório representa a estrutura básica de uma infraestrutura de TI empresarial, simulando um ambiente real com servidores de rede, serviços essenciais e segurança aplicada.
+Este laboratório simula um ambiente corporativo de infraestrutura de TI com foco em serviços essenciais, segurança, automação e monitoramento, utilizando tecnologias amplamente aplicadas no mercado.
 
-This lab represents the base structure of an enterprise IT infrastructure, simulating a real-world environment with essential services and applied security.
+This lab simulates a corporate IT infrastructure environment, focusing on essential services, security, automation, and monitoring — using widely adopted technologies in real-world scenarios.
 
 ---
 
-## 🧱 Componentes do sistema / System Components
+## 🧱 Componentes do Sistema / System Components
 
 | Componente / Component | Função / Function                          |
 |------------------------|--------------------------------------------|
-| Apache2                | Servidor Web                               |
-| Postfix                | Servidor de e-mail                         |
-| BIND9                  | DNS local (resolução interna)              |
-| MySQL                  | Banco de dados                             |
-| OpenVPN                | VPN entre filiais ou acesso remoto seguro  |
-| iptables / UFW         | Controle de tráfego de rede                |
-| Fail2Ban               | Proteção contra ataques de força bruta     |
-| Snort                  | IDS para monitoramento de tráfego          |
-| Zabbix Agent           | Monitoramento e alertas                    |
-| rsync + cron           | Backup automatizado                        |
-| SSH + hardening        | Acesso seguro ao sistema                   |
+| Apache2                | Servidor Web (HTTP)                        |
+| Postfix                | Servidor de E-mail (SMTP local)            |
+| BIND9                  | Servidor DNS para resolução local          |
+| MariaDB / MySQL        | Banco de dados relacional                  |
+| OpenVPN                | Acesso remoto seguro via túnel VPN         |
+| iptables / UFW         | Controle de tráfego de rede (Firewall)     |
+| Fail2Ban               | Bloqueio automático contra brute-force     |
+| Snort                  | IDS (Sistema de Detecção de Intrusos)      |
+| Zabbix Agent           | Coleta de métricas para monitoramento      |
+| rsync + cron           | Backup automatizado de arquivos críticos   |
+| SSH Hardening          | Acesso remoto seguro e atualizado          |
 
 ---
 
-## 🔗 Integrações e dependências
+## 🔄 Integração entre serviços
 
-- Todos os serviços se comunicam entre si usando IPs locais definidos
-- A configuração manual dos serviços permite aprendizado técnico aprofundado
-- Logs são gerenciados com `journalctl`, `logrotate` e monitoramento ativo
+- Os serviços estão configurados no mesmo servidor, em rede privada virtual.
+- O firewall garante que apenas as portas essenciais estejam liberadas.
+- Serviços como VPN, DNS e Email operam localmente para facilitar testes.
+- O Snort e Fail2Ban monitoram segurança em tempo real.
+- Logs são coletados e organizados para facilitar a detecção de falhas.
+- Backups são automatizados diariamente e salvos em diretório seguro.
 
 ---
 
-## ✅ Próximo passo sugerido
+## ⚙️ Aplicações práticas / Practical Applications
 
-- [ascii_infrastructure.md](../diagrams/ascii_infrastructure.md): Veja o diagrama da topologia do ambiente.
+- Simulação de ambiente corporativo com falhas reais e análise de logs  
+- Testes de segurança com IDS e bloqueio automático  
+- Criação de backups e recuperação de serviços  
+- Monitoramento com alertas e coleta de métricas
+
+---
+
+## ✅ Recomendação
+
+Utilize este laboratório como uma base sólida para:
+
+- Apresentar projetos em entrevistas técnicas  
+- Validar competências práticas de administração de redes e sistemas  
+- Estudar para certificações como Linux Essentials, LPIC-1, CompTIA Linux+, e até AWS SysOps Admin
+
+---
+
+## 📎 Próximo passo sugerido / Suggested next step
+
+- Visualizar o [diagrama ASCII de topologia](../diagrams/ascii_infrastructure.md)
