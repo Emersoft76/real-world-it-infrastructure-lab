@@ -27,4 +27,3 @@ This script installs and starts the Apache2 web server, used to host web pages a
 ```bash
 chmod +x install_web_server.sh
 sudo ./install_web_server.sh
-```
