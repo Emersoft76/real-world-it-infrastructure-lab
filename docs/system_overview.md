@@ -1,4 +1,3 @@
-```markdown
 # 🧩 System Overview / Visão Geral do Sistema
 
 ---
